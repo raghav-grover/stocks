@@ -2,7 +2,7 @@ import "reflect-metadata";
 import dotenv from 'dotenv';
 import app from './app';
 
-dotenv.config({});
+dotenv.config();
 
 // Start the application by listening to specific port
 const port = Number(process.env.PORT || process.env.PORT || 8080);

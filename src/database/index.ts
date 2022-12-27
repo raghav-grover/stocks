@@ -1,7 +1,4 @@
 import { Connection, createConnection, SimpleConsoleLogger } from "typeorm";
-import dotenv from 'dotenv';
-
-dotenv.config({});
 class Database {
 
   public connection: Connection;
@@ -12,12 +9,12 @@ class Database {
 
   private connectToDB(): void {
     createConnection({
-      type: envString("mysql", "sqlite"),
-      host: envString(process.env.DATABASE_HOST!, ""),
-      port: envString(Number(process.env.DATABASE_PORT!), 0),
-      username: envString(process.env.DATABASE_USERNAME!, ""),
-      password: envString(process.env.DATABASE_PASSWORD!, ""),
-      database: envString(process.env.DATABASE_NAME!, "./db.sqlite"),
+      type: 'postgres',
+      host: "leadxstage.c4u9hyqxirm7.ap-south-1.rds.amazonaws.com",
+      port: 5430,
+      username: "bloom",
+      password: "Lukin123",
+      database: "stockdata",
       entities: [
         __dirname + "/entity/*.ts",
         __dirname + "/entity/*.js"
