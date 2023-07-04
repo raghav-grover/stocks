@@ -1,0 +1,32 @@
+        - name: 
+          image: 
+        - name: agent
+          image: IMAGE_NAMES
+        - name: trace-agent
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/gcr.io/datadoghq/agent:7.43.0-jmx
+        - name: process-agent
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/gcr.io/datadoghq/agent:7.43.0-jmx
+        - name: ebs-plugin
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/gcr.io/datadoghq/agent:7.43.0-jmx
+        - name: node-driver-registrar
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/public.ecr.aws/ebs-csi-driver/aws-ebs-csi-driver:v1.11.3
+        - name: liveness-probe
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.5.1
+        - name: efs-plugin
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/k8s.gcr.io/sig-storage/livenessprobe:v2.6.0
+        - name: csi-driver-registrar
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/amazon/aws-efs-csi-driver:v1.5.4
+        - name: liveness-probe
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/public.ecr.aws/eks-distro/kubernetes-csi/node-driver-registrar:v2.6.2-eks-1-25-latest
+        - name: nvidia-device-plugin-ctr
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/public.ecr.aws/eks-distro/kubernetes-csi/livenessprobe:v2.8.0-eks-1-25-latest
+        - name: aws-node
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/nvcr.io/nvidia/k8s-device-plugin:v0.12.2
+        - name: kube-proxy
+          image: 602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.12.0
+        - name: node-cache
+          image: 602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.23.8-eksbuild.2
+        - name: aws-node-termination-handler
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/registry.k8s.io/dns/k8s-dns-node-cache:1.22.20
+        - name: twistlock-defender
+          image: 259596320454.dkr.ecr.us-east-1.amazonaws.com/thirdparty/public.ecr.aws/aws-ec2/aws-node-termination-handler:v1.19.0

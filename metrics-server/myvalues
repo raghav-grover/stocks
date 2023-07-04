@@ -1,0 +1,40 @@
+command:
+  - /metrics-server
+  - --logtostderr
+  - --kubelet-insecure-tls=true
+  - --kubelet-preferred-address-types=InternalIP
+  - --metric-resolution=${metric_resolution_in_seconds}s
+  - --v=2
+  - --cert-dir=/tmp
+
+
+containerSecurityContext:
+  enabled: false
+
+image:
+  registry: 815294430419.dkr.ecr.us-east-1.amazonaws.com/thirdparty
+  repository: gcr.io/google_containers/metrics-server-amd64
+  tag: v0.3.5
+  pullPolicy: IfNotPresent
+
+livenessProbe:
+  enabled: true
+  failureThreshold: 3
+  initialDelaySeconds: 20
+  httpGet:
+    path: /healthz
+    port: https
+    scheme: HTTPS
+  periodSeconds: 10
+
+readinessProbe:
+  enabled: true
+  failureThreshold: 3
+  initialDelaySeconds: 20
+  httpGet:
+    path: /healthz
+    port: https
+    scheme: HTTPS
+  periodSeconds: 10  
+
+affinity: {}

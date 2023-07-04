@@ -10,10 +10,10 @@ class Database {
   private connectToDB(): void {
     createConnection({
       type: 'postgres',
-      host: "leadxstage.c4u9hyqxirm7.ap-south-1.rds.amazonaws.com",
+      host: "leadx-stage.c4u9hyqxirm7.ap-south-1.rds.amazonaws.com",
       port: 5430,
       username: "bloom",
-      password: "Lukin123",
+      password: "CZD3mQX3ev5uenYc9V",
       database: "stockdata",
       entities: [
         __dirname + "/entity/*.ts",

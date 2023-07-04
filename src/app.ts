@@ -12,6 +12,8 @@ import { Delivery, DeliveryBucket, Portfolio, ProcessedDelivery } from '@entity/
 const Str = require('@supercharge/strings');
 import {db} from './database'
 import { EntityManager } from 'typeorm';
+import { readFileSync } from 'fs';
+import path from 'path';
 const http = require('http');
 
 
@@ -135,7 +137,7 @@ router.get('/report', async (req: express.Request, res: express.Response) => {
   if(processingDates.length > 0) {
     processingDataMissingFor = Math.abs(differenceInCalendarDays(processingDates[0].date, Date.now()))  
   }else{
-    processingDataMissingFor = 60
+    processingDataMissingFor = 180
   }
 
   /*
@@ -173,7 +175,6 @@ router.get('/report', async (req: express.Request, res: express.Response) => {
           where todayDelivery.volume > fooa.avgVolume 
           ORDER by "deliveryPercentage" DESC
         `, [])
-  
         console.log('For processing', today, lastDayForMA, 'the results are ', results.length);
       }catch(ex) {
         console.log('Conitnuing to next execution')
@@ -272,11 +273,21 @@ let dumpMissingData = async () => {
     console.log('fetching for ', dateProcess)
     let response: any = null;
     try{     
+      console.log(`https://www1.nseindia.com/archives/equities/mto/MTO_${dateProcess}.DAT`)
       response = await axios.get(`https://www1.nseindia.com/archives/equities/mto/MTO_${dateProcess}.DAT`)
     }catch(ex) {
-      console.log('Looks like ', dateProcess, 'is 404')
-      continue;
+      console.log('Looks like ', dateProcess, 'is 404', 'Checking in manual folder')
+      try {
+        const filePath = path.join(__dirname, 'manual', `MTO_${dateProcess}.DAT`);
+        const contents = readFileSync(filePath, 'utf8')
+        console.log(contents)
+        response = {status : 200, data : contents}
+      }catch{
+        console.log('Manual file not found, skipping')
+        continue;
+      }   
     }
+    console.log(response.status)
 
     //console.log(response.status, response.data);
     console.log('Processing for ', dateProcess)

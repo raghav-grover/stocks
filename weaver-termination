@@ -1,0 +1,1702 @@
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:42.215494 -0400 EDT m=+7.987654131
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -2,6 +2,8 @@
+   apiVersion: v1
+   kind: Endpoints
+   metadata:
++    annotations:
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:42Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -19,6 +21,9 @@
+       fieldsType: FieldsV1
+       fieldsV1:
+         f:metadata:
++          f:annotations:
++            .: {}
++            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+           f:labels:
+             .: {}
+             f:app.kubernetes.io/managed-by: {}
+@@ -34,10 +39,10 @@
+         f:subsets: {}
+       manager: kube-controller-manager
+       operation: Update
+-      time: "2023-05-17T22:14:50Z"
++      time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031718176"
++    resourceVersion: "3031718936"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -1905,6 +1910,14 @@
+         namespace: experience-api
+         resourceVersion: "3030837475"
+         uid: 299a5f7a-4ebc-4e5b-ae57-09fe8e47336e
++    - ip: 10.64.78.52
++      nodeName: ip-10-64-75-91.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-4dwbz
++        namespace: experience-api
++        resourceVersion: "3031718932"
++        uid: b741dc18-640a-409d-8b3c-72a18a7b8fbb
+     - ip: 10.64.79.118
+       nodeName: ip-10-64-113-48.us-west-2.compute.internal
+       targetRef:
+@@ -2200,7 +2213,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-6hvp2
+         namespace: experience-api
+-        resourceVersion: "3031718172"
++        resourceVersion: "3031718315"
+         uid: 4d2ed6de-ea54-4145-8259-f9863ac17f48
+     - ip: 10.64.137.27
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2208,7 +2221,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rbzw6
+         namespace: experience-api
+-        resourceVersion: "3031718162"
++        resourceVersion: "3031718307"
+         uid: ce5f7b41-e60d-45c2-ab70-e8d36be2b181
+     - ip: 10.64.142.33
+       nodeName: ip-10-64-174-156.us-west-2.compute.internal
+@@ -2248,7 +2261,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-4w9zq
+         namespace: experience-api
+-        resourceVersion: "3031718157"
++        resourceVersion: "3031718313"
+         uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+     - ip: 10.64.159.150
+       nodeName: ip-10-64-148-23.us-west-2.compute.internal
+@@ -2264,7 +2277,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-t7ntd
+         namespace: experience-api
+-        resourceVersion: "3031718169"
++        resourceVersion: "3031718310"
+         uid: b84b2d09-f8b3-4c22-b544-0afa4d2931ab
+     - ip: 10.64.164.158
+       nodeName: ip-10-64-142-186.us-west-2.compute.internal
+@@ -2280,7 +2293,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rkbsh
+         namespace: experience-api
+-        resourceVersion: "3031718151"
++        resourceVersion: "3031718316"
+         uid: 9f73a83c-b600-4246-94f6-0192a88b6779
+     - ip: 10.64.168.154
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2288,7 +2301,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-jz2pc
+         namespace: experience-api
+-        resourceVersion: "3031718154"
++        resourceVersion: "3031718312"
+         uid: 7d46652a-4bab-448b-b103-fc206f130cab
+     - ip: 10.64.179.6
+       nodeName: ip-10-64-177-94.us-west-2.compute.internal
+@@ -2330,14 +2343,6 @@
+         namespace: experience-api
+         resourceVersion: "3031715981"
+         uid: 178cd21f-1607-4295-8910-a4cdf4487f19
+-    - ip: 10.64.78.52
+-      nodeName: ip-10-64-75-91.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-4dwbz
+-        namespace: experience-api
+-        resourceVersion: "3031715438"
+-        uid: b741dc18-640a-409d-8b3c-72a18a7b8fbb
+     - ip: 10.64.80.62
+       nodeName: ip-10-64-86-236.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:42.81609 -0400 EDT m=+8.588240116
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:42Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:43Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031718936"
++    resourceVersion: "3031718980"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -630,6 +630,14 @@
+         namespace: experience-api
+         resourceVersion: "3030852708"
+         uid: f2d01302-3bce-4019-83e6-07c8d8ac27d7
++    - ip: 10.64.142.33
++      nodeName: ip-10-64-174-156.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-9x5kn
++        namespace: experience-api
++        resourceVersion: "3031718976"
++        uid: 40835bc4-4f4d-46f1-b2f9-3c05ea5ebaf0
+     - ip: 10.64.143.218
+       nodeName: ip-10-64-186-230.us-west-2.compute.internal
+       targetRef:
+@@ -2223,14 +2231,6 @@
+         namespace: experience-api
+         resourceVersion: "3031718307"
+         uid: ce5f7b41-e60d-45c2-ab70-e8d36be2b181
+-    - ip: 10.64.142.33
+-      nodeName: ip-10-64-174-156.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-9x5kn
+-        namespace: experience-api
+-        resourceVersion: "3031715324"
+-        uid: 40835bc4-4f4d-46f1-b2f9-3c05ea5ebaf0
+     - ip: 10.64.143.80
+       nodeName: ip-10-64-190-204.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:44.315679 -0400 EDT m=+10.087803167
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:43Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:44Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031718980"
++    resourceVersion: "3031719033"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -790,6 +790,14 @@
+         namespace: experience-api
+         resourceVersion: "3030857408"
+         uid: 3ca504b4-626a-44ba-b70c-cbeaa5151a7b
++    - ip: 10.64.159.150
++      nodeName: ip-10-64-148-23.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-grq9p
++        namespace: experience-api
++        resourceVersion: "3031719026"
++        uid: f5cefabb-795a-4c09-a94c-d4c201160c3f
+     - ip: 10.64.159.180
+       nodeName: ip-10-64-186-230.us-west-2.compute.internal
+       targetRef:
+@@ -2263,14 +2271,6 @@
+         namespace: experience-api
+         resourceVersion: "3031718313"
+         uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+-    - ip: 10.64.159.150
+-      nodeName: ip-10-64-148-23.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-grq9p
+-        namespace: experience-api
+-        resourceVersion: "3031715391"
+-        uid: f5cefabb-795a-4c09-a94c-d4c201160c3f
+     - ip: 10.64.159.52
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:44.446061 -0400 EDT m=+10.218183039
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719033"
++    resourceVersion: "3031719036"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -2054,6 +2054,14 @@
+         namespace: experience-api
+         resourceVersion: "3031156312"
+         uid: b6219dd2-f3b4-4ff2-b592-5c5ba1413c5b
++    - ip: 10.64.86.98
++      nodeName: ip-10-64-73-54.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rcvlk
++        namespace: experience-api
++        resourceVersion: "3031719029"
++        uid: c2d0dcc4-297e-4df2-9315-68daa53a68b5
+     - ip: 10.64.88.192
+       nodeName: ip-10-64-113-110.us-west-2.compute.internal
+       targetRef:
+@@ -2351,14 +2359,6 @@
+         namespace: experience-api
+         resourceVersion: "3031717827"
+         uid: f614fef6-775c-45b1-96a0-6930d4d16050
+-    - ip: 10.64.86.98
+-      nodeName: ip-10-64-73-54.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rcvlk
+-        namespace: experience-api
+-        resourceVersion: "3031715386"
+-        uid: c2d0dcc4-297e-4df2-9315-68daa53a68b5
+     - ip: 10.64.90.228
+       nodeName: ip-10-64-122-132.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:45.190242 -0400 EDT m=+10.962351515
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:44Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:45Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719036"
++    resourceVersion: "3031719111"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -262,6 +262,14 @@
+         namespace: experience-api
+         resourceVersion: "3031183006"
+         uid: 067bb96a-14e0-43e0-b49a-f40b76eecd95
++    - ip: 10.64.115.127
++      nodeName: ip-10-64-84-237.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-c4btv
++        namespace: experience-api
++        resourceVersion: "3031719106"
++        uid: 9c9e4536-9fd2-42d1-a43c-f57216f3867a
+     - ip: 10.64.115.14
+       nodeName: ip-10-64-125-31.us-west-2.compute.internal
+       targetRef:
+@@ -2191,14 +2199,6 @@
+         namespace: experience-api
+         resourceVersion: "3031717834"
+         uid: cda2f971-7566-4c92-b7f7-6b99fa65abfb
+-    - ip: 10.64.115.127
+-      nodeName: ip-10-64-84-237.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-c4btv
+-        namespace: experience-api
+-        resourceVersion: "3031715439"
+-        uid: 9c9e4536-9fd2-42d1-a43c-f57216f3867a
+     - ip: 10.64.121.175
+       nodeName: ip-10-64-113-110.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:45.343842 -0400 EDT m=+11.115948758
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719111"
++    resourceVersion: "3031719114"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -726,6 +726,14 @@
+         namespace: experience-api
+         resourceVersion: "3030831918"
+         uid: b374c860-d9e1-4ff2-a592-2078e0247de2
++    - ip: 10.64.151.186
++      nodeName: ip-10-64-141-71.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-96ns8
++        namespace: experience-api
++        resourceVersion: "3031719110"
++        uid: d72a735e-2b19-4ecf-8a0f-54bc3f01d95d
+     - ip: 10.64.151.80
+       nodeName: ip-10-64-135-101.us-west-2.compute.internal
+       targetRef:
+@@ -2263,14 +2271,6 @@
+         namespace: experience-api
+         resourceVersion: "3031715517"
+         uid: 8aad279c-b2bd-4f1d-b32c-ae4c64df6fd9
+-    - ip: 10.64.151.186
+-      nodeName: ip-10-64-141-71.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-96ns8
+-        namespace: experience-api
+-        resourceVersion: "3031716635"
+-        uid: d72a735e-2b19-4ecf-8a0f-54bc3f01d95d
+     - ip: 10.64.153.170
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:45.49363 -0400 EDT m=+11.265734110
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719114"
++    resourceVersion: "3031719129"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -854,6 +854,14 @@
+         namespace: experience-api
+         resourceVersion: "3030865531"
+         uid: 53accb01-1c7f-4d0e-87d2-dbcae0523f38
++    - ip: 10.64.164.158
++      nodeName: ip-10-64-142-186.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-n4r7r
++        namespace: experience-api
++        resourceVersion: "3031719123"
++        uid: 3acc2877-fb0d-4cc7-9463-7747e9f555f7
+     - ip: 10.64.167.0
+       nodeName: ip-10-64-164-74.us-west-2.compute.internal
+       targetRef:
+@@ -2287,14 +2295,6 @@
+         namespace: experience-api
+         resourceVersion: "3031718310"
+         uid: b84b2d09-f8b3-4c22-b544-0afa4d2931ab
+-    - ip: 10.64.164.158
+-      nodeName: ip-10-64-142-186.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-n4r7r
+-        namespace: experience-api
+-        resourceVersion: "3031716646"
+-        uid: 3acc2877-fb0d-4cc7-9463-7747e9f555f7
+     - ip: 10.64.168.101
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:46.815646 -0400 EDT m=+12.587727230
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:45Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:47Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719129"
++    resourceVersion: "3031719209"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -342,6 +342,14 @@
+         namespace: experience-api
+         resourceVersion: "3030867111"
+         uid: 30a2168d-f424-4246-8457-0ba5d31f7cd1
++    - ip: 10.64.121.175
++      nodeName: ip-10-64-113-110.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-dc7lc
++        namespace: experience-api
++        resourceVersion: "3031719205"
++        uid: b506a843-c242-4408-97a0-3b29a5bb8fed
+     - ip: 10.64.122.225
+       nodeName: ip-10-64-115-103.us-west-2.compute.internal
+       targetRef:
+@@ -2215,14 +2223,6 @@
+         namespace: experience-api
+         resourceVersion: "3031717834"
+         uid: cda2f971-7566-4c92-b7f7-6b99fa65abfb
+-    - ip: 10.64.121.175
+-      nodeName: ip-10-64-113-110.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-dc7lc
+-        namespace: experience-api
+-        resourceVersion: "3031715516"
+-        uid: b506a843-c242-4408-97a0-3b29a5bb8fed
+     - ip: 10.64.123.180
+       nodeName: ip-10-64-113-110.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:46.940396 -0400 EDT m=+12.712474779
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719209"
++    resourceVersion: "3031719216"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -1910,6 +1910,14 @@
+         namespace: experience-api
+         resourceVersion: "3030841870"
+         uid: e91db697-6751-404c-83e8-bd7d5907d448
++    - ip: 10.64.74.144
++      nodeName: ip-10-64-121-19.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-8gkrl
++        namespace: experience-api
++        resourceVersion: "3031719212"
++        uid: 178cd21f-1607-4295-8910-a4cdf4487f19
+     - ip: 10.64.74.22
+       nodeName: ip-10-64-113-48.us-west-2.compute.internal
+       targetRef:
+@@ -2343,14 +2351,6 @@
+         namespace: experience-api
+         resourceVersion: "3031717833"
+         uid: 7a9d6749-9715-474d-81af-4883f28b6b49
+-    - ip: 10.64.74.144
+-      nodeName: ip-10-64-121-19.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-8gkrl
+-        namespace: experience-api
+-        resourceVersion: "3031715981"
+-        uid: 178cd21f-1607-4295-8910-a4cdf4487f19
+     - ip: 10.64.80.62
+       nodeName: ip-10-64-86-236.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:47.08903 -0400 EDT m=+12.861105882
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719216"
++    resourceVersion: "3031719225"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -702,6 +702,14 @@
+         namespace: experience-api
+         resourceVersion: "3030853825"
+         uid: 273bacbc-2399-44d8-aaa8-69d4d2d01f49
++    - ip: 10.64.148.169
++      nodeName: ip-10-64-170-66.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-kg89q
++        namespace: experience-api
++        resourceVersion: "3031719223"
++        uid: 8aad279c-b2bd-4f1d-b32c-ae4c64df6fd9
+     - ip: 10.64.148.198
+       nodeName: ip-10-64-159-232.us-west-2.compute.internal
+       targetRef:
+@@ -2279,14 +2287,6 @@
+         namespace: experience-api
+         resourceVersion: "3031715535"
+         uid: 162e4f3c-8bb3-4d2c-855c-b57e56fdac08
+-    - ip: 10.64.148.169
+-      nodeName: ip-10-64-170-66.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-kg89q
+-        namespace: experience-api
+-        resourceVersion: "3031715517"
+-        uid: 8aad279c-b2bd-4f1d-b32c-ae4c64df6fd9
+     - ip: 10.64.153.170
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:47.215861 -0400 EDT m=+12.987934974
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719225"
++    resourceVersion: "3031719236"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -1070,6 +1070,14 @@
+         namespace: experience-api
+         resourceVersion: "3031599019"
+         uid: d084642a-99da-48c2-a594-11ff563b742d
++    - ip: 10.64.179.6
++      nodeName: ip-10-64-177-94.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-ff98m
++        namespace: experience-api
++        resourceVersion: "3031719229"
++        uid: fcbf2602-c761-4b5c-b221-ae9f976c9416
+     - ip: 10.64.18.56
+       nodeName: ip-10-64-39-44.us-west-2.compute.internal
+       targetRef:
+@@ -2319,14 +2327,6 @@
+         namespace: experience-api
+         resourceVersion: "3031718312"
+         uid: 7d46652a-4bab-448b-b103-fc206f130cab
+-    - ip: 10.64.179.6
+-      nodeName: ip-10-64-177-94.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-ff98m
+-        namespace: experience-api
+-        resourceVersion: "3031716712"
+-        uid: fcbf2602-c761-4b5c-b221-ae9f976c9416
+     - ip: 10.64.35.124
+       nodeName: ip-10-64-58-225.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:47.329211 -0400 EDT m=+13.101282933
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719236"
++    resourceVersion: "3031719240"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -678,6 +678,14 @@
+         namespace: experience-api
+         resourceVersion: "3031205181"
+         uid: c57c2026-2a9f-44a2-a008-56c901ba8c5d
++    - ip: 10.64.143.80
++      nodeName: ip-10-64-190-204.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-bbjgk
++        namespace: experience-api
++        resourceVersion: "3031719231"
++        uid: 162e4f3c-8bb3-4d2c-855c-b57e56fdac08
+     - ip: 10.64.145.95
+       nodeName: ip-10-64-150-191.us-west-2.compute.internal
+       targetRef:
+@@ -2287,14 +2295,6 @@
+         namespace: experience-api
+         resourceVersion: "3031718307"
+         uid: ce5f7b41-e60d-45c2-ab70-e8d36be2b181
+-    - ip: 10.64.143.80
+-      nodeName: ip-10-64-190-204.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-bbjgk
+-        namespace: experience-api
+-        resourceVersion: "3031715535"
+-        uid: 162e4f3c-8bb3-4d2c-855c-b57e56fdac08
+     - ip: 10.64.153.170
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:47.44149 -0400 EDT m=+13.213560108
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:15:42Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719240"
++    resourceVersion: "3031719250"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -438,6 +438,14 @@
+         namespace: experience-api
+         resourceVersion: "3030845139"
+         uid: 9795552b-6f10-4e6b-bfc5-daa12c68a07c
++    - ip: 10.64.126.82
++      nodeName: ip-10-64-116-223.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-62p6q
++        namespace: experience-api
++        resourceVersion: "3031719243"
++        uid: fed6a9b2-3817-4d1e-b983-4016c0ef686c
+     - ip: 10.64.128.200
+       nodeName: ip-10-64-148-23.us-west-2.compute.internal
+       targetRef:
+@@ -2271,14 +2279,6 @@
+         namespace: experience-api
+         resourceVersion: "3031715524"
+         uid: 2a98bb54-80e9-4fe0-a98b-a41b1a609f35
+-    - ip: 10.64.126.82
+-      nodeName: ip-10-64-116-223.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-62p6q
+-        namespace: experience-api
+-        resourceVersion: "3031714798"
+-        uid: fed6a9b2-3817-4d1e-b983-4016c0ef686c
+     - ip: 10.64.136.9
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:15:47.577351 -0400 EDT m=+13.349419168
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -2,8 +2,6 @@
+   apiVersion: v1
+   kind: Endpoints
+   metadata:
+-    annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:15:47Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -21,9 +19,6 @@
+       fieldsType: FieldsV1
+       fieldsV1:
+         f:metadata:
+-          f:annotations:
+-            .: {}
+-            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+           f:labels:
+             .: {}
+             f:app.kubernetes.io/managed-by: {}
+@@ -39,10 +34,10 @@
+         f:subsets: {}
+       manager: kube-controller-manager
+       operation: Update
+-      time: "2023-05-17T22:15:42Z"
++      time: "2023-05-17T22:15:47Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719250"
++    resourceVersion: "3031719259"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -390,6 +385,14 @@
+         namespace: experience-api
+         resourceVersion: "3031205294"
+         uid: c457c269-5016-4cf6-a31c-12a82fdae1d2
++    - ip: 10.64.124.107
++      nodeName: ip-10-64-68-132.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-jwdrt
++        namespace: experience-api
++        resourceVersion: "3031719245"
++        uid: 2a98bb54-80e9-4fe0-a98b-a41b1a609f35
+     - ip: 10.64.124.130
+       nodeName: ip-10-64-73-54.us-west-2.compute.internal
+       targetRef:
+@@ -2271,14 +2274,6 @@
+         namespace: experience-api
+         resourceVersion: "3031717829"
+         uid: e35260be-d7bf-4c11-b3ef-8f4c5e916e4c
+-    - ip: 10.64.124.107
+-      nodeName: ip-10-64-68-132.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-jwdrt
+-        namespace: experience-api
+-        resourceVersion: "3031715524"
+-        uid: 2a98bb54-80e9-4fe0-a98b-a41b1a609f35
+     - ip: 10.64.136.9
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:16:05.138557 -0400 EDT m=+30.910320388
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -37,7 +37,7 @@
+       time: "2023-05-17T22:15:47Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031719259"
++    resourceVersion: "3031720047"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -2280,7 +2280,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-6hvp2
+         namespace: experience-api
+-        resourceVersion: "3031718315"
++        resourceVersion: "3031719961"
+         uid: 4d2ed6de-ea54-4145-8259-f9863ac17f48
+     - ip: 10.64.137.27
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2288,7 +2288,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rbzw6
+         namespace: experience-api
+-        resourceVersion: "3031718307"
++        resourceVersion: "3031719960"
+         uid: ce5f7b41-e60d-45c2-ab70-e8d36be2b181
+     - ip: 10.64.153.170
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2296,7 +2296,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-4w9zq
+         namespace: experience-api
+-        resourceVersion: "3031718313"
++        resourceVersion: "3031719926"
+         uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+     - ip: 10.64.159.52
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2304,7 +2304,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-t7ntd
+         namespace: experience-api
+-        resourceVersion: "3031718310"
++        resourceVersion: "3031719950"
+         uid: b84b2d09-f8b3-4c22-b544-0afa4d2931ab
+     - ip: 10.64.168.101
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2312,7 +2312,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rkbsh
+         namespace: experience-api
+-        resourceVersion: "3031718316"
++        resourceVersion: "3031719962"
+         uid: 9f73a83c-b600-4246-94f6-0192a88b6779
+     - ip: 10.64.168.154
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2320,7 +2320,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-jz2pc
+         namespace: experience-api
+-        resourceVersion: "3031718312"
++        resourceVersion: "3031719921"
+         uid: 7d46652a-4bab-448b-b103-fc206f130cab
+     - ip: 10.64.35.124
+       nodeName: ip-10-64-58-225.us-west-2.compute.internal
+@@ -2330,14 +2330,6 @@
+         namespace: experience-api
+         resourceVersion: "3031717832"
+         uid: e5218e3a-3f6d-4297-80aa-9be6b9fbba7d
+-    - ip: 10.64.52.39
+-      nodeName: ip-10-64-55-149.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-26dcv
+-        namespace: experience-api
+-        resourceVersion: "3031717310"
+-        uid: 7709ea8d-7736-4e83-a746-1f8a148b5791
+     - ip: 10.64.55.208
+       nodeName: ip-10-64-5-196.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:16:07.665887 -0400 EDT m=+33.437606543
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -2,6 +2,8 @@
+   apiVersion: v1
+   kind: Endpoints
+   metadata:
++    annotations:
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:16:06Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -19,6 +21,9 @@
+       fieldsType: FieldsV1
+       fieldsV1:
+         f:metadata:
++          f:annotations:
++            .: {}
++            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+           f:labels:
+             .: {}
+             f:app.kubernetes.io/managed-by: {}
+@@ -34,10 +39,10 @@
+         f:subsets: {}
+       manager: kube-controller-manager
+       operation: Update
+-      time: "2023-05-17T22:15:47Z"
++      time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031720047"
++    resourceVersion: "3031720179"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -2338,6 +2343,14 @@
+         namespace: experience-api
+         resourceVersion: "3031717833"
+         uid: 7a9d6749-9715-474d-81af-4883f28b6b49
++    - ip: 10.64.8.150
++      nodeName: ip-10-64-16-24.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-glb7x
++        namespace: experience-api
++        resourceVersion: "3031720177"
++        uid: cde01210-82c6-4931-8613-77d975f3a152
+     - ip: 10.64.80.62
+       nodeName: ip-10-64-86-236.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:16:28.3416 -0400 EDT m=+54.112961420
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:16:06Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:16:28Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031720179"
++    resourceVersion: "3031721098"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -2166,6 +2166,14 @@
+         namespace: experience-api
+         resourceVersion: "3030866926"
+         uid: c3246edf-fa8a-4043-96b5-74b721d2183d
++    - ip: 10.64.90.228
++      nodeName: ip-10-64-122-132.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-xdwc4
++        namespace: experience-api
++        resourceVersion: "3031721091"
++        uid: 82b28a8e-9a83-4529-a801-e47d643ceb2c
+     - ip: 10.64.91.133
+       nodeName: ip-10-64-75-91.us-west-2.compute.internal
+       targetRef:
+@@ -2285,7 +2293,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-6hvp2
+         namespace: experience-api
+-        resourceVersion: "3031719961"
++        resourceVersion: "3031720795"
+         uid: 4d2ed6de-ea54-4145-8259-f9863ac17f48
+     - ip: 10.64.137.27
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2293,7 +2301,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rbzw6
+         namespace: experience-api
+-        resourceVersion: "3031719960"
++        resourceVersion: "3031720791"
+         uid: ce5f7b41-e60d-45c2-ab70-e8d36be2b181
+     - ip: 10.64.153.170
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2301,7 +2309,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-4w9zq
+         namespace: experience-api
+-        resourceVersion: "3031719926"
++        resourceVersion: "3031720842"
+         uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+     - ip: 10.64.159.52
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2309,7 +2317,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-t7ntd
+         namespace: experience-api
+-        resourceVersion: "3031719950"
++        resourceVersion: "3031720765"
+         uid: b84b2d09-f8b3-4c22-b544-0afa4d2931ab
+     - ip: 10.64.168.101
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2317,7 +2325,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rkbsh
+         namespace: experience-api
+-        resourceVersion: "3031719962"
++        resourceVersion: "3031720792"
+         uid: 9f73a83c-b600-4246-94f6-0192a88b6779
+     - ip: 10.64.168.154
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+@@ -2325,7 +2333,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-jz2pc
+         namespace: experience-api
+-        resourceVersion: "3031719921"
++        resourceVersion: "3031720836"
+         uid: 7d46652a-4bab-448b-b103-fc206f130cab
+     - ip: 10.64.35.124
+       nodeName: ip-10-64-58-225.us-west-2.compute.internal
+@@ -2349,7 +2357,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-glb7x
+         namespace: experience-api
+-        resourceVersion: "3031720177"
++        resourceVersion: "3031720400"
+         uid: cde01210-82c6-4931-8613-77d975f3a152
+     - ip: 10.64.80.62
+       nodeName: ip-10-64-86-236.us-west-2.compute.internal
+@@ -2359,14 +2367,6 @@
+         namespace: experience-api
+         resourceVersion: "3031717827"
+         uid: f614fef6-775c-45b1-96a0-6930d4d16050
+-    - ip: 10.64.90.228
+-      nodeName: ip-10-64-122-132.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-xdwc4
+-        namespace: experience-api
+-        resourceVersion: "3031717303"
+-        uid: 82b28a8e-9a83-4529-a801-e47d643ceb2c
+     ports:
+     - appProtocol: http
+       name: http
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:16:28.482348 -0400 EDT m=+54.253706503
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031721098"
++    resourceVersion: "3031721107"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -2030,6 +2030,14 @@
+         namespace: experience-api
+         resourceVersion: "3030832893"
+         uid: 948aa8f9-7ec1-4370-9226-a94b9adaf437
++    - ip: 10.64.80.62
++      nodeName: ip-10-64-86-236.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-6mptj
++        namespace: experience-api
++        resourceVersion: "3031721100"
++        uid: f614fef6-775c-45b1-96a0-6930d4d16050
+     - ip: 10.64.81.53
+       nodeName: ip-10-64-77-128.us-west-2.compute.internal
+       targetRef:
+@@ -2359,14 +2367,6 @@
+         namespace: experience-api
+         resourceVersion: "3031720400"
+         uid: cde01210-82c6-4931-8613-77d975f3a152
+-    - ip: 10.64.80.62
+-      nodeName: ip-10-64-86-236.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-6mptj
+-        namespace: experience-api
+-        resourceVersion: "3031717827"
+-        uid: f614fef6-775c-45b1-96a0-6930d4d16050
+     ports:
+     - appProtocol: http
+       name: http
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:16:28.586563 -0400 EDT m=+54.357920151
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031721107"
++    resourceVersion: "3031721113"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -54,6 +54,14 @@
+         namespace: experience-api
+         resourceVersion: "3030853544"
+         uid: 8f2968fa-a4f4-4308-a3e0-432086191c90
++    - ip: 10.64.10.239
++      nodeName: ip-10-64-17-7.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-nd8wq
++        namespace: experience-api
++        resourceVersion: "3031721101"
++        uid: 24bedaec-74a7-404b-ba71-da0758af9e51
+     - ip: 10.64.101.171
+       nodeName: ip-10-64-77-128.us-west-2.compute.internal
+       targetRef:
+@@ -1502,6 +1510,14 @@
+         namespace: experience-api
+         resourceVersion: "3030849917"
+         uid: 25e51ae6-ad24-4655-8c20-244769bef9f3
++    - ip: 10.64.35.124
++      nodeName: ip-10-64-58-225.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-nv5wm
++        namespace: experience-api
++        resourceVersion: "3031721105"
++        uid: e5218e3a-3f6d-4297-80aa-9be6b9fbba7d
+     - ip: 10.64.35.42
+       nodeName: ip-10-64-7-187.us-west-2.compute.internal
+       targetRef:
+@@ -2271,14 +2287,6 @@
+         resourceVersion: "3031153427"
+         uid: 48f4f58e-8306-4a3a-8f9f-1b9f0439664a
+     notReadyAddresses:
+-    - ip: 10.64.10.239
+-      nodeName: ip-10-64-17-7.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-nd8wq
+-        namespace: experience-api
+-        resourceVersion: "3031717306"
+-        uid: 24bedaec-74a7-404b-ba71-da0758af9e51
+     - ip: 10.64.112.32
+       nodeName: ip-10-64-113-48.us-west-2.compute.internal
+       targetRef:
+@@ -2343,14 +2351,6 @@
+         namespace: experience-api
+         resourceVersion: "3031720836"
+         uid: 7d46652a-4bab-448b-b103-fc206f130cab
+-    - ip: 10.64.35.124
+-      nodeName: ip-10-64-58-225.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-nv5wm
+-        namespace: experience-api
+-        resourceVersion: "3031717832"
+-        uid: e5218e3a-3f6d-4297-80aa-9be6b9fbba7d
+     - ip: 10.64.55.208
+       nodeName: ip-10-64-5-196.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:16:28.71641 -0400 EDT m=+54.487764714
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031721113"
++    resourceVersion: "3031721117"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -382,6 +382,14 @@
+         namespace: experience-api
+         resourceVersion: "3031696714"
+         uid: be599fee-07ae-492b-ab6a-32bdeb73f392
++    - ip: 10.64.123.180
++      nodeName: ip-10-64-113-110.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-8p44p
++        namespace: experience-api
++        resourceVersion: "3031721108"
++        uid: e35260be-d7bf-4c11-b3ef-8f4c5e916e4c
+     - ip: 10.64.123.205
+       nodeName: ip-10-64-73-54.us-west-2.compute.internal
+       targetRef:
+@@ -2295,14 +2303,6 @@
+         namespace: experience-api
+         resourceVersion: "3031717834"
+         uid: cda2f971-7566-4c92-b7f7-6b99fa65abfb
+-    - ip: 10.64.123.180
+-      nodeName: ip-10-64-113-110.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-8p44p
+-        namespace: experience-api
+-        resourceVersion: "3031717829"
+-        uid: e35260be-d7bf-4c11-b3ef-8f4c5e916e4c
+     - ip: 10.64.136.9
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:16:28.816557 -0400 EDT m=+54.587909959
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031721117"
++    resourceVersion: "3031721123"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -230,6 +230,14 @@
+         namespace: experience-api
+         resourceVersion: "3030847187"
+         uid: 6e96def8-3d12-4203-a58a-ddda8c95fe05
++    - ip: 10.64.112.32
++      nodeName: ip-10-64-113-48.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-msl44
++        namespace: experience-api
++        resourceVersion: "3031721119"
++        uid: cda2f971-7566-4c92-b7f7-6b99fa65abfb
+     - ip: 10.64.113.240
+       nodeName: ip-10-64-73-54.us-west-2.compute.internal
+       targetRef:
+@@ -2295,14 +2303,6 @@
+         resourceVersion: "3031153427"
+         uid: 48f4f58e-8306-4a3a-8f9f-1b9f0439664a
+     notReadyAddresses:
+-    - ip: 10.64.112.32
+-      nodeName: ip-10-64-113-48.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-msl44
+-        namespace: experience-api
+-        resourceVersion: "3031717834"
+-        uid: cda2f971-7566-4c92-b7f7-6b99fa65abfb
+     - ip: 10.64.136.9
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:16:28.966738 -0400 EDT m=+54.738088758
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031721123"
++    resourceVersion: "3031721128"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -1854,6 +1854,14 @@
+         namespace: experience-api
+         resourceVersion: "3030863868"
+         uid: 4e53cf5c-3940-4a72-98cd-3e016faa23b0
++    - ip: 10.64.55.208
++      nodeName: ip-10-64-5-196.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-hk44b
++        namespace: experience-api
++        resourceVersion: "3031721122"
++        uid: 7a9d6749-9715-474d-81af-4883f28b6b49
+     - ip: 10.64.59.142
+       nodeName: ip-10-64-18-101.us-west-2.compute.internal
+       targetRef:
+@@ -2351,14 +2359,6 @@
+         namespace: experience-api
+         resourceVersion: "3031720836"
+         uid: 7d46652a-4bab-448b-b103-fc206f130cab
+-    - ip: 10.64.55.208
+-      nodeName: ip-10-64-5-196.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-hk44b
+-        namespace: experience-api
+-        resourceVersion: "3031717833"
+-        uid: 7a9d6749-9715-474d-81af-4883f28b6b49
+     - ip: 10.64.8.150
+       nodeName: ip-10-64-16-24.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:17:20.768372 -0400 EDT m=+106.538824686
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:16:28Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:17:20Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031721128"
++    resourceVersion: "3031723457"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -886,6 +886,14 @@
+         namespace: experience-api
+         resourceVersion: "3030840351"
+         uid: 38f16c77-0466-4253-8884-1254167f9b10
++    - ip: 10.64.159.52
++      nodeName: ip-10-64-162-143.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-t7ntd
++        namespace: experience-api
++        resourceVersion: "3031723452"
++        uid: b84b2d09-f8b3-4c22-b544-0afa4d2931ab
+     - ip: 10.64.160.21
+       nodeName: ip-10-64-186-230.us-west-2.compute.internal
+       targetRef:
+@@ -2335,14 +2343,6 @@
+         namespace: experience-api
+         resourceVersion: "3031720842"
+         uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+-    - ip: 10.64.159.52
+-      nodeName: ip-10-64-162-143.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-t7ntd
+-        namespace: experience-api
+-        resourceVersion: "3031720765"
+-        uid: b84b2d09-f8b3-4c22-b544-0afa4d2931ab
+     - ip: 10.64.168.101
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+@@ -2365,7 +2365,7 @@
+         kind: Pod
+         name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-glb7x
+         namespace: experience-api
+-        resourceVersion: "3031720400"
++        resourceVersion: "3031721518"
+         uid: cde01210-82c6-4931-8613-77d975f3a152
+     ports:
+     - appProtocol: http
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:17:21.067448 -0400 EDT m=+106.837895062
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:17:20Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:17:21Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031723457"
++    resourceVersion: "3031723484"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -622,6 +622,14 @@
+         namespace: experience-api
+         resourceVersion: "3031183187"
+         uid: 1dbe5776-fbe0-4169-90d5-44266077d501
++    - ip: 10.64.137.27
++      nodeName: ip-10-64-162-143.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rbzw6
++        namespace: experience-api
++        resourceVersion: "3031723481"
++        uid: ce5f7b41-e60d-45c2-ab70-e8d36be2b181
+     - ip: 10.64.137.8
+       nodeName: ip-10-64-180-21.us-west-2.compute.internal
+       targetRef:
+@@ -2327,14 +2335,6 @@
+         namespace: experience-api
+         resourceVersion: "3031720795"
+         uid: 4d2ed6de-ea54-4145-8259-f9863ac17f48
+-    - ip: 10.64.137.27
+-      nodeName: ip-10-64-162-143.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rbzw6
+-        namespace: experience-api
+-        resourceVersion: "3031720791"
+-        uid: ce5f7b41-e60d-45c2-ab70-e8d36be2b181
+     - ip: 10.64.153.170
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:17:21.294817 -0400 EDT m=+107.065260887
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031723484"
++    resourceVersion: "3031723488"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -958,6 +958,14 @@
+         namespace: experience-api
+         resourceVersion: "3031156247"
+         uid: 988b989a-d0c0-46c2-a8bf-d0c5ff3110b7
++    - ip: 10.64.168.101
++      nodeName: ip-10-64-162-143.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rkbsh
++        namespace: experience-api
++        resourceVersion: "3031723483"
++        uid: 9f73a83c-b600-4246-94f6-0192a88b6779
+     - ip: 10.64.168.173
+       nodeName: ip-10-64-150-191.us-west-2.compute.internal
+       targetRef:
+@@ -2343,14 +2351,6 @@
+         namespace: experience-api
+         resourceVersion: "3031720842"
+         uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+-    - ip: 10.64.168.101
+-      nodeName: ip-10-64-162-143.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-rkbsh
+-        namespace: experience-api
+-        resourceVersion: "3031720792"
+-        uid: 9f73a83c-b600-4246-94f6-0192a88b6779
+     - ip: 10.64.168.154
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:17:21.634096 -0400 EDT m=+107.404533565
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031723488"
++    resourceVersion: "3031723495"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -582,6 +582,14 @@
+         namespace: experience-api
+         resourceVersion: "3031156435"
+         uid: cb480f53-728b-4026-b6ee-13e5f6c0f106
++    - ip: 10.64.136.9
++      nodeName: ip-10-64-162-143.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-6hvp2
++        namespace: experience-api
++        resourceVersion: "3031723492"
++        uid: 4d2ed6de-ea54-4145-8259-f9863ac17f48
+     - ip: 10.64.137.144
+       nodeName: ip-10-64-190-204.us-west-2.compute.internal
+       targetRef:
+@@ -2335,14 +2343,6 @@
+         resourceVersion: "3031153427"
+         uid: 48f4f58e-8306-4a3a-8f9f-1b9f0439664a
+     notReadyAddresses:
+-    - ip: 10.64.136.9
+-      nodeName: ip-10-64-162-143.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-6hvp2
+-        namespace: experience-api
+-        resourceVersion: "3031720795"
+-        uid: 4d2ed6de-ea54-4145-8259-f9863ac17f48
+     - ip: 10.64.153.170
+       nodeName: ip-10-64-162-143.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:17:21.867882 -0400 EDT m=+107.638315806
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:17:21Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:17:22Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031723495"
++    resourceVersion: "3031723540"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -974,6 +974,14 @@
+         namespace: experience-api
+         resourceVersion: "3031723483"
+         uid: 9f73a83c-b600-4246-94f6-0192a88b6779
++    - ip: 10.64.168.154
++      nodeName: ip-10-64-162-143.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-jz2pc
++        namespace: experience-api
++        resourceVersion: "3031723535"
++        uid: 7d46652a-4bab-448b-b103-fc206f130cab
+     - ip: 10.64.168.173
+       nodeName: ip-10-64-150-191.us-west-2.compute.internal
+       targetRef:
+@@ -2351,14 +2359,6 @@
+         namespace: experience-api
+         resourceVersion: "3031720842"
+         uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+-    - ip: 10.64.168.154
+-      nodeName: ip-10-64-162-143.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-jz2pc
+-        namespace: experience-api
+-        resourceVersion: "3031720836"
+-        uid: 7d46652a-4bab-448b-b103-fc206f130cab
+     - ip: 10.64.8.150
+       nodeName: ip-10-64-16-24.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:17:22.043692 -0400 EDT m=+107.814122320
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031723540"
++    resourceVersion: "3031723549"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -846,6 +846,14 @@
+         namespace: experience-api
+         resourceVersion: "3031691841"
+         uid: 525caa70-a097-4d65-9f9b-f117f0740417
++    - ip: 10.64.153.170
++      nodeName: ip-10-64-162-143.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-4w9zq
++        namespace: experience-api
++        resourceVersion: "3031723545"
++        uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+     - ip: 10.64.153.65
+       nodeName: ip-10-64-148-23.us-west-2.compute.internal
+       targetRef:
+@@ -2351,14 +2359,6 @@
+         resourceVersion: "3031153427"
+         uid: 48f4f58e-8306-4a3a-8f9f-1b9f0439664a
+     notReadyAddresses:
+-    - ip: 10.64.153.170
+-      nodeName: ip-10-64-162-143.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-4w9zq
+-        namespace: experience-api
+-        resourceVersion: "3031720842"
+-        uid: 89ed4a3a-f386-4610-abaa-6a0fc82abedc
+     - ip: 10.64.8.150
+       nodeName: ip-10-64-16-24.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:17:46.767841 -0400 EDT m=+132.537843547
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:17:22Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:17:47Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:16:07Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031723549"
++    resourceVersion: "3031725022"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -2110,6 +2110,14 @@
+         namespace: experience-api
+         resourceVersion: "3031196827"
+         uid: 60eed7ae-6c3e-4674-827d-99785e7ee54a
++    - ip: 10.64.8.150
++      nodeName: ip-10-64-16-24.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-glb7x
++        namespace: experience-api
++        resourceVersion: "3031725018"
++        uid: cde01210-82c6-4931-8613-77d975f3a152
+     - ip: 10.64.80.147
+       nodeName: ip-10-64-113-110.us-west-2.compute.internal
+       targetRef:
+@@ -2358,15 +2366,6 @@
+         namespace: experience-api
+         resourceVersion: "3031153427"
+         uid: 48f4f58e-8306-4a3a-8f9f-1b9f0439664a
+-    notReadyAddresses:
+-    - ip: 10.64.8.150
+-      nodeName: ip-10-64-16-24.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-glb7x
+-        namespace: experience-api
+-        resourceVersion: "3031721518"
+-        uid: cde01210-82c6-4931-8613-77d975f3a152
+     ports:
+     - appProtocol: http
+       name: http
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:20:02.39529 -0400 EDT m=+268.162941221
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -2,8 +2,6 @@
+   apiVersion: v1
+   kind: Endpoints
+   metadata:
+-    annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:17:47Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -21,9 +19,6 @@
+       fieldsType: FieldsV1
+       fieldsV1:
+         f:metadata:
+-          f:annotations:
+-            .: {}
+-            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+           f:labels:
+             .: {}
+             f:app.kubernetes.io/managed-by: {}
+@@ -39,10 +34,10 @@
+         f:subsets: {}
+       manager: kube-controller-manager
+       operation: Update
+-      time: "2023-05-17T22:16:07Z"
++      time: "2023-05-17T22:20:02Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031725022"
++    resourceVersion: "3031731905"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -1182,14 +1177,6 @@
+         namespace: experience-api
+         resourceVersion: "3031189967"
+         uid: e1e1c59e-ab90-439b-a889-2d959b1dca53
+-    - ip: 10.64.180.250
+-      nodeName: ip-10-64-186-230.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-4btm5
+-        namespace: experience-api
+-        resourceVersion: "3031156356"
+-        uid: ff8d84dd-2f46-45ac-9c61-036a381c9b6f
+     - ip: 10.64.180.93
+       nodeName: ip-10-64-150-191.us-west-2.compute.internal
+       targetRef:
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:20:26.022967 -0400 EDT m=+291.790208396
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -2,6 +2,8 @@
+   apiVersion: v1
+   kind: Endpoints
+   metadata:
++    annotations:
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:20:04Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -19,6 +21,9 @@
+       fieldsType: FieldsV1
+       fieldsV1:
+         f:metadata:
++          f:annotations:
++            .: {}
++            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+           f:labels:
+             .: {}
+             f:app.kubernetes.io/managed-by: {}
+@@ -34,10 +39,10 @@
+         f:subsets: {}
+       manager: kube-controller-manager
+       operation: Update
+-      time: "2023-05-17T22:20:02Z"
++      time: "2023-05-17T22:20:26Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031731905"
++    resourceVersion: "3031732995"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -2353,6 +2358,15 @@
+         namespace: experience-api
+         resourceVersion: "3031153427"
+         uid: 48f4f58e-8306-4a3a-8f9f-1b9f0439664a
++    notReadyAddresses:
++    - ip: 10.64.144.221
++      nodeName: ip-10-64-190-199.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-ch82c
++        namespace: experience-api
++        resourceVersion: "3031732994"
++        uid: 6b36bb8a-6234-4b15-898b-da3322608df2
+     ports:
+     - appProtocol: http
+       name: http
+# Resource: kubectl get endpoints -oyaml -n experience-api weaver-loom-bex @ 2023-05-17 18:22:04.288729 -0400 EDT m=+390.054266843
+--- old/endpoints/experience-api/weaver-loom-bex.yaml
++++ new/endpoints/experience-api/weaver-loom-bex.yaml
+@@ -3,7 +3,7 @@
+   kind: Endpoints
+   metadata:
+     annotations:
+-      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:20:04Z"
++      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-17T22:22:04Z"
+     creationTimestamp: "2022-04-27T13:31:50Z"
+     labels:
+       app.kubernetes.io/managed-by: Helm
+@@ -42,7 +42,7 @@
+       time: "2023-05-17T22:20:26Z"
+     name: weaver-loom-bex
+     namespace: experience-api
+-    resourceVersion: "3031732995"
++    resourceVersion: "3031738201"
+     uid: 3902f342-1428-44a6-ba94-edcdc06b6f8e
+   subsets:
+   - addresses:
+@@ -742,6 +742,14 @@
+         namespace: experience-api
+         resourceVersion: "3031719231"
+         uid: 162e4f3c-8bb3-4d2c-855c-b57e56fdac08
++    - ip: 10.64.144.221
++      nodeName: ip-10-64-190-199.us-west-2.compute.internal
++      targetRef:
++        kind: Pod
++        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-ch82c
++        namespace: experience-api
++        resourceVersion: "3031738198"
++        uid: 6b36bb8a-6234-4b15-898b-da3322608df2
+     - ip: 10.64.145.95
+       nodeName: ip-10-64-150-191.us-west-2.compute.internal
+       targetRef:
+@@ -2358,15 +2366,6 @@
+         namespace: experience-api
+         resourceVersion: "3031153427"
+         uid: 48f4f58e-8306-4a3a-8f9f-1b9f0439664a
+-    notReadyAddresses:
+-    - ip: 10.64.144.221
+-      nodeName: ip-10-64-190-199.us-west-2.compute.internal
+-      targetRef:
+-        kind: Pod
+-        name: weaver-loom-prod-us-west-2-bex-template-7d4698d57b-ch82c
+-        namespace: experience-api
+-        resourceVersion: "3031732994"
+-        uid: 6b36bb8a-6234-4b15-898b-da3322608df2
+     ports:
+     - appProtocol: http
+       name: http
